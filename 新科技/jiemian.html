@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="1.css"/>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				outline: none;
+			}
+			#zhengye{
+				width: 1366px;
+				height: 638px;
+				background: black;
+			}
+			#logjia{
+				width: 394px;
+				height: 250px;
+				background: url(img/jiazai.png);
+				background-size: 100% 100%;
+				position: absolute;
+				left: 490px;
+				top: 150px;
+				opacity: 0;
+				animation: touming 8s ;
+			}
+			@keyframes touming{
+				from{opacity: 0.8;}
+				to{
+					opacity: 0;
+				}
+			}
+			#zuo1{
+				width: 60px;
+				height: 600px;
+				background: url(img/zuo1.png);
+				position: absolute;
+				top: 20px;
+				left: 50px;
+				animation: zuo1 3s ;
+			}
+			@keyframes zuo1{
+				0%{left: 300px;
+				background: url(img/you1.png);}
+				100%{left: 50px;}
+			}
+			#zuo2{
+				width: 250px;
+				height: 600px;
+				position: absolute;
+				top: 20px;
+				left: 120px;
+				animation: zuo2 3s linear;
+			}
+			@keyframes zuo2{
+				0%{left: 50px;
+				opacity: 0;}
+				50%{
+					left: 90px;
+					opacity: 0;
+				}
+				100{left: 120px;
+				opacity: 1;}
+			}
+			#you1{
+				width: 60px;
+				height: 600px;
+				background: url(img/you1.png);
+				position: absolute;
+				top: 20px;
+				right: 50px;
+				animation: you1 3s ;
+			}
+			@keyframes you1{
+				0%{right: 300px;
+				background: url(img/zuo1.png);}
+				100%{right: 50px;}
+			}
+			#you2{
+				width: 250px;
+				height: 600px;
+				background: url(img/you2.png);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 20px;
+				right: 120px;
+				animation: you2 3s linear;
+			}
+			@keyframes you2{
+				0%{right: 50px;
+				opacity: 0;}
+				50%{
+					right: 90px;
+					opacity: 0;
+				}
+				100{right: 120px;
+				opacity: 1;}
+			}
+			#zuo2top{
+				width: 250px;
+				height: 200px;
+				background:url(img/zuo2top.png) ;
+			}
+			#zuo2zhong{
+				width: 250px;
+				height: 70px;
+				border-bottom: 1px dotted #B62F37;
+			}
+			#zuo2zhongtop{
+				width: 250px;
+				height: 20px;
+				background: url(img/zuo2zhong.png);
+				background-size: 100% 100%;
+			}
+			#shengbo{
+				width: 210px;
+				height: 50px;
+				margin: 0 auto;
+			}
+			#shengbo1{
+				width: 70px;
+				height: 1px;
+				float: left;
+				margin-top: 20px;
+				border-bottom:1px dotted #279A90 ;
+				animation: shengbo 5s linear infinite;
+				
+			}
+			#shengbo2{
+				width: 70px;
+				height: 1px;
+				float: left;
+				margin-top: 20px;
+				border-bottom:1px dotted #279A90 ;
+				animation: shengbo 4s linear infinite;
+				
+			}
+			#shengbo3{
+				width: 70px;
+				height: 1px;
+				float: left;
+				margin-top: 20px;
+				border-bottom:1px dotted #279A90 ;
+				animation: shengbo 3s linear infinite;
+			}
+			@keyframes shengbo{
+				0%{border-bottom:1px dotted #279A90 ;}
+				25%{border-bottom:6px dotted #279A90 ;}
+				50%{border-bottom:8px dotted #279A90 ;}
+				75%{border-bottom:10px dotted #279A90 ;}
+				100%{border-bottom:3px dotted #279A90 ;}
+			}
+			#zuo2yong{
+				width: 250px;
+				height: 160px;
+				color: #B62F37;
+				font-size: 14px;
+			}
+			#zuo2wei{
+				margin-top: 20px;
+				width: 250px;
+				height: 134px;
+				background: url(img/zuo2wei.png);
+			}
+			#zhong{
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				left: 380px;
+				top: 20px;
+				animation: zhong 8s linear;
+			}
+			@keyframes zhong{
+				0%{opacity: 0;}
+				35%{opacity: 0;}
+				70%{opacity: 0.5;}
+				100%{opacity: 1;}
+			}
+			#anniu{
+				width: 250px;
+				height: 120px;
+				margin-top: 20px;
+			}
+			#anniu .anniub{
+				width: 115px;
+				height: 25px;
+				float: left;
+				border: 0.5px solid #343F44;
+				border-bottom: 0.5px solid #B62F37;
+				background: black;
+				margin-left: 5px;
+				margin-top: 10px;
+			}
+			.btnl{
+				width: 110px;
+				height: 20px;
+				margin-left: 2.5px;
+				margin-top: 2.5px;
+				font-size: 15px;
+				font-weight: bolder;
+				border: 0.5px solid #B62F37;
+				border-bottom: 0.5px solid #343F44;
+				background: black;
+				color: #B62F37;
+			}
+			.btnl:hover{
+				animation: btnl 0.1s 3;
+			}
+			@keyframes btnl{
+				from{box-shadow: inset 0 0 3px #B62F37;}
+				to{box-shadow: inset 0 0 50px #B62F37;}
+			}
+			#zhongtop{
+				width: 600px;
+				height: 60px;
+			}
+			#zhongtz{
+				width: 150px;
+				height: 25px;
+				float: left;
+				border: 0.5px solid #343F44;
+				border-bottom: 0.5px solid #B62F37;
+				background: black;
+				margin-left: 5px;
+				margin-top: 10px;
+			}
+			#zhongbtn{
+				width: 145px;
+				height: 20px;
+				margin-left: 2.5px;
+				margin-top: 2.5px;
+				font-size: 15px;
+				font-weight: bolder;
+				border: 0.5px solid #B62F37;
+				border-bottom: 0.5px solid #343F44;
+				background: black;
+				color: #B62F37;
+			}
+			#zhongbtn:hover{
+				animation: btnl 0.1s 2;
+			}
+			#zhongty{
+				width: 285px;
+				height: 60px;
+				background: url(img/zhongtop.png);
+				background-size: 100% 100%;
+				float: right;
+				margin-right: 10px;
+			}
+			#zhongwei{
+				background: url(img/zhongwei.png);
+				background-size: 100% 100%;
+				width: 600px;
+				height: 70px;
+				border-bottom: 1px dotted #B62F37;
+			}
+			#hexin{
+				width: 460px;
+				height: 460px;
+				border: 1px solid #343F44;
+				border-radius:50% ;
+				margin: 0 auto;
+			}
+			#quan1{
+				width: 430px;
+				height: 430px;
+				border: 3px dotted #343F44;
+				border-bottom: 3px solid #B62F37;
+				border-left:3px solid #B62F37 ;
+				border-radius:50% ;
+				margin-left: 12px;
+				margin-top: 12px;
+				float: left;
+				
+			}
+			#quan2{
+				width: 420px;
+				height: 420px;
+				border: 3px solid #343F44;
+				border-bottom:3px solid #B62F37 ;
+				border-radius:50% ;
+				margin-left: 2px;
+				margin-top: 2px;
+				float: left;
+				animation: quan 12s linear infinite;
+			}
+			#quan3{
+				width: 400px;
+				height: 400px;
+				border:3px dotted #343F44 ;
+				border-top:3px dotted #B62F37 ;
+				border-radius:50% ;
+				margin-left: 7px;
+				margin-top: 7px;
+				float: left;
+			}
+			@keyframes quan{
+				from{
+					transform-origin: 213px 213px;
+					transform: rotate(0deg);
+				}
+				to{
+					transform-origin: 213px 213px;
+					transform: rotate(360deg);
+				}
+			}
+			#neirong{
+				width: 380px;
+				height: 380px;
+				border-radius: 50%;
+				background: red;
+				position: absolute;
+				margin-left: 40px;
+				margin-top: 40px;
+				overflow: hidden;
+			}
+			#yin1{
+				width: 300px;
+				height: 400px;
+				border: 3px solid #279A90;
+				border-top:3px dotted #B62F37;
+				border-right: 3px dotted #B62F37;
+				box-shadow:inset 0 0 220px #279A90;
+				position: absolute;
+				right: 20px;
+				top: 60px;
+				line-height: 28px;
+				display: none;
+				color: white;
+			}
+			.next{
+				float: right;
+				margin-right: 0px;
+			}
+			#yin2{
+				width: 100px;
+				height: 150px;
+				border: 3px solid #279A90;
+				border-bottom:3px dotted #B62F37;
+				border-right: 3px dotted #B62F37;
+				box-shadow: inset 0 0 100px #279A90;
+				position: absolute;
+				left: -6px;
+				top: 20px;
+				color: white;
+				display: none;
+			}
+			#xian1{
+				width: 280px;
+				height: 2px;
+				position: absolute;
+				box-shadow:inset 0 0 4px white,0 0 4px #279A90;
+				left: -6px;
+				top: 360px;
+				display: none;
+			}
+			#xian2{
+				width: 175px;
+				height: 2px;
+				position: absolute;
+				left: 99px;
+				top: 100px;
+				box-shadow: inset 0 0 4px white,0 0 4px #279A90;
+				display: none;
+			}
+			#xianqiu{
+				width: 30px;
+				height: 30px;
+				margin: 0 auto;
+				margin-top: 170px;
+				border-radius: 50%;
+				opacity: 0.3;
+				display: none;
+			}
+			@keyframes jsdong{
+				0%{box-shadow: inset 0 0 40px red;
+				}
+				10%{
+					box-shadow: inset 0 0 50px yellow;
+					border: 3px dotted #FF0000;
+					width: 94px;height: 94px;
+					transform-origin: 50% 50%;
+					transform: rotate(0deg);
+				}
+				20%{
+					border: 20px dotted #279A90;
+					width: 60px;height: 60px;
+					transform-origin: 50% 50%;
+					transform: rotateZ(120deg);
+				}
+				30%{
+					border: 10px solid #343F44;
+					border-bottom: 10px dotted #FF4500;
+					transform-origin: 50% 50%;
+					transform: rotateZ(360deg);
+				}
+				40%{
+					position: absolute;
+					left: 20px;top: 20px;
+					width: 100px;height: 100px;
+					border: 20px dotted #FFFF00;
+					box-shadow: inset 0 0 50px greenyellow;
+				}
+				50%{
+					position: absolute;
+					left: 20px;top: 20px;
+					width: 100px;height: 100px;
+					border: 10px dotted #FFFF00;
+					box-shadow: inset 0 0 50px greenyellow;
+					transform-origin: 50% 50%;
+					transform: rotateZ(0deg);
+				}
+				60%{
+					position: absolute;
+					left: 20px;top: 20px;
+					width: 200px;height: 200px;
+					border: 6px dotted #ADFF2F;
+					box-shadow: inset 0 0 50px darkorchid;
+					transform-origin: 50% 50%;
+					transform: rotateZ(60deg);
+				}
+				70%{
+					position: absolute;
+					left: -20px;top: -20px;
+					width: 300px;height: 300px;
+					border: 8px dotted #9932CC;
+					box-shadow: inset 0 0 50px #FF4500;
+					transform-origin: 50% 50%;
+					transform: rotateZ(120deg);
+				}
+				80%{
+					position: absolute;
+					left: 20px;top: 20px;
+					width: 60px;height: 60px;
+					border: 20px dotted #9932CC;
+					box-shadow: inset 0 0 50px #FF4500;
+					transform-origin: 50% 50%;
+					transform: rotateZ(180deg);
+				}
+				90%{
+					position: absolute;
+					left: 20px;top: 20px;
+					width: 94px;height: 94px;
+					border: 6px dotted #9932CC;
+					box-shadow: inset 0 0 50px #FF4500;
+					transform-origin: 50% 50%;
+					transform: rotateZ(240deg);
+				}
+				100%{
+					margin-left: 60px;margin-top: 60px;
+					width: 94px;height: 94px;
+					border: 3px dotted #9932CC;
+					box-shadow: inset 0 0 50px #FF4500;
+					transform-origin: 50% 50%;
+					transform: rotateZ(360deg);
+				}
+			}
+			@keyframes hxdong{
+				0%{box-shadow: inset 0px 0px 220px red;}
+				25%{box-shadow: inset 0px 0px 220px yellow;}
+				50%{box-shadow: inset 0px 0px 220px white;}
+				75%{box-shadow: inset 0px 0px 220px #279A90;}
+				100%{box-shadow: inset 0px 0px 220px orangered;}
+			}
+			@keyframes xianqiu{
+				0%{
+					border: 10px dotted blue;
+					margin-top: 150px;
+				}
+				25%{
+					border: 40px dotted red;
+					width: 80px;height: 80px;
+					margin-top: 10px;
+				}
+				50%{
+					border: 20px dotted yellow;
+					width: 200px;height: 200px;
+					margin-top: -70px;
+				}
+				75%{
+					border: 160px dotted greenyellow;
+					margin-top: -150px;
+				}
+				100%{border: 200px dotted orangered;
+				margin-top: -230px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zhengye">
+			<div id="to_top">
+		<div id="d2">
+			
+			</div>
+			<div id="d3">
+				
+			</div>
+			<div id="d4">
+				
+			</div>
+			<div id="d5">
+				
+			</div>
+			<div id="d6">
+				
+			</div>
+			<div id="d7">
+				
+			</div>
+		</div>
+
+			<audio id="mp3" src="img/Stafford Bawler - Water Palace.mp3"  loop=""></audio>
+			<audio id="mp31" src="img/Obfusc - Amateur Cartography.mp3" loop=""></audio>
+			<div id="logjia"></div>
+			<div id="zuo1"></div>
+			<div id="zuo2">
+				<div id="zuo2top"></div>
+				<div id="zuo2zhong">
+					<div id="zuo2zhongtop"></div>
+					<div id="shengbo">
+						<div id="shengbo1"></div>
+						<div id="shengbo2"></div>
+						<div id="shengbo3"></div>
+					</div>
+				</div>
+				<div id="zuo2yong">
+					<p>MENU</p>
+					<ul id="anniu">
+						<li class="anniub"><input type="button"  id="an1" class="btnl" value="01  HOME………" /></li>
+						<li class="anniub"><input type="button"  id="an2"  class="btnl" value="02  PRODUCT…" /></li>
+						<li class="anniub"><input type="button"  id="an3" class="btnl" value="03  ABOUT……" /></li>
+						<a href="项目.html"><li class="anniub"><input type="button"   class="btnl" value="04  NEWS…………" /></li></a>
+						<li class="anniub"><input type="button"  id="an5" class="btnl" value="05  RESET……………" /></li>
+						<li class="anniub"><input type="button"  id="an6" class="btnl" value="06  CONTACT…" /></li>
+					</ul>
+				</div>
+				<div id="zuo2wei"></div>
+			</div>
+			<div id="zhong">
+				<div id="zhongtop">
+					<div id="zhongtz">
+						<input type="button"  id="zhongbtn" value="CHANGE SCHEME" />
+					</div>
+					<div id="zhongty"></div>
+				</div>
+				<div id="hexin">
+						<div id="quan1">
+							<div id="quan2">
+								<div id="quan3">
+								</div>
+							</div>
+						</div>
+						<div id="neirong">
+							
+						</div>
+						<div id="xianqiu">
+								
+						</div>
+				</div>
+				<div id="zhongwei"></div>
+				<div id="yin1">
+					新規プロジェクトの立ち上げ、既存サービスの国内拡大や海外展開に伴う事業拡大のため、コアとなるメンバーを募集します。
+                                                  業務内容	
+                                                  新規及び国内外の既存サービスのサーバーインフラ開発と運用をお任せします。
+                                                  サーバーサイド設計・開発・運用担当として、まずは国外、海外含め既存プロジェクトに関わって頂きます。
+                                                  国内180万人以上、同カテゴリ内ではトップクラスの売上を誇るサービスとなります。
+                                                   その後、スキルやご希望に合わせてプロジェクト内容や規模を相談しながら決めていきます。
+                                                  応募資格
+                    <input type="button" id="xiabu" class="next" value="NEXT" />
+				</div>
+				<div id="yin2">
+					【必須要件】
+                    ■PHPなどを用いたWebアプリケーションの設計・開発経験
+                    ■Linux/RDBM
+                    <input type="button" id="queding" class="next" value="OK" />
+				</div>
+				<div id="xian1"></div>
+				<div id="xian2"></div>
+			</div>
+			<div id="you1"></div>
+			<div id="you2"></div>
+		</div>
+		
+		<script src="1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var an1=document.getElementById("an1");
+			var an2=document.getElementById("an2");
+			var an3=document.getElementById("an3");
+			var an5=document.getElementById("an5");
+			var an6=document.getElementById("an6");
+			var cha=document.getElementById("zhongbtn");
+			var hxnr=document.getElementById("neirong");
+			var xian1=document.getElementById("xian1");
+			var yc1=document.getElementById("yin1");
+			var next=document.getElementById("xiabu");
+			var xian2=document.getElementById("xian2");
+			var yc2=document.getElementById("yin2");
+			var ok=document.getElementById("queding");
+			var mp3=document.getElementById("mp3");
+			var mp31=document.getElementById("mp31");
+			var xianqiu=document.getElementById("xianqiu");
+			var b=1;
+			an6.onclick=function(){
+				if(b){
+					mp3.pause();
+					mp31.play();
+					b=0;
+				}else{
+					mp3.play();
+					mp31.pause();
+					b=1;
+				}
+			}
+			an5.onclick=function(){
+				hxnr.innerHTML="";
+				hxnr.style.animation="none";
+				xianqiu.style.display="none"
+				hxnr.style.background="red";
+				an2.disabled=false;
+			}
+			an3.onclick=function(){
+				if(b){
+				    hxnr.style.background="none";
+					xianqiu.style.display="block";
+					xianqiu.style.animation="xianqiu 6s linear infinite";
+					b=0;
+				}else{
+					xianqiu.style.display="none";
+					b=1;
+				}
+			}
+			cha.onclick=function(){
+				hxnr.innerHTML="";
+				hxnr.style.background="none";
+				hxnr.style.animation="hxdong 6s linear infinite";
+				an2.disabled=false;
+				var qiu = creatDiv();
+				hxnr.appendChild(qiu);
+			}
+			an2.onclick=function(){
+				hxnr.style.background="none";
+			        for (var i = 0; i < 4; i++) {
+			    	var qiu = creatDiv();
+					 hxnr.appendChild(qiu);
+			    	}
+			       an2.disabled=true;
+				}
+			function creatDiv(){
+				var qiu=document.createElement("div");
+				qiu.style.cssText="width: 100px;height: 100px;float: left;margin-left: 60px;margin-top: 60px;border-radius:50%;"
+				qiu.style.animation="jsdong 20s linear infinite";
+				return qiu;
+			}
+			
+			function bofang(){
+				b=b+1;
+				if(b==6){
+					mp3.play();
+				}
+			}
+			an1.onclick=function(){
+				if(b==1){
+					xian1.style.display="block";
+				    yc1.style.display="block";
+				    b=0;
+				}else{
+					xian1.style.display="none";
+				    yc1.style.display="none";
+				    b=1;
+				}
+			}
+			next.onclick=function(){
+				if(b){
+					xian2.style.display="block";
+					yc2.style.display="block";
+					b=0;
+				}else{
+					xian2.style.display="none";
+					yc2.style.display="none";
+					b=1;
+				}
+			}
+			ok.onclick=function(){
+				xian1.style.display="none";
+				yc1.style.display="none";
+				xian2.style.display="none";
+				yc2.style.display="none";
+			}
+			setInterval(bofang,1000)
+		</script>
+	</body>
+</html>
