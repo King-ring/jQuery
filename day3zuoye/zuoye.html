@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				color: orange;
+				height: 200px;
+				width: 200px;
+				background: blue;
+				position: absolute;
+			}
+			#yi2{left: 400px;}
+			#yi3{left: 800px;}
+			#yi4{left: 1200px;}
+			p{
+				font-size: 60px;
+				color: red;
+				float: right;
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="yi1">就问你服不服</div>
+		<div id="yi2">不服你咬我</div>
+		<p>请尝试把两个都变小</p>
+	</body>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$.fn.extend({
+			keji:function(){
+				this.mouseenter(function(){
+					$(this).stop(true);
+					$(this).css("background","#008000");
+					$(this).animate({"fontSize":"30px","color":"red","top":"0px","width":"200px","height": "200px"});
+					$(this).animate({"fontSize":"60px","color":"orange","top":"100px","width":"400px","height": "400px"})
+			  })
+			}
+		})
+	</script>
+	<script type="text/javascript">
+		$("div").keji();
+	</script>
+</html>
